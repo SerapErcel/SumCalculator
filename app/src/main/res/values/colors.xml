@@ -10,6 +10,7 @@
     <!-- Custom Colors -->
     <color name="primaryColor">#90a4ae</color>
     <color name="primaryLightColor">#c1d5e0</color>
+    <color name="primaryDeepColor">#3A404A</color>
     <color name="primaryDarkColor">#62757f</color>
     <color name="secondaryColor">#9575cd</color>
     <color name="secondaryLightColor">#c7a4ff</color>
