@@ -2,7 +2,7 @@
     <string name="app_name">SumCalculator</string>
     <string name="app_title">Sum Calculator</string>
     <string name="zero">0</string>
-    <string name="decimal">,</string>
+    <string name="decimal">.</string>
     <string name="sum">+</string>
     <string name="three">3</string>
     <string name="two">2</string>

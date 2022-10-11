@@ -25,6 +25,7 @@
             android:text="@string/app_title"
             android:textColor="@color/white"
             android:textSize="26sp"
+            tools:ignore="TextContrastCheck"
             tools:layout_editor_absoluteX="118dp"
             tools:layout_editor_absoluteY="10dp" />
 
@@ -38,7 +39,6 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins"
-        android:text="281+375"
         android:textAlignment="textEnd"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,14 +53,13 @@
         android:layout_marginTop="180dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins"
-        android:text="656"
         android:textAlignment="textEnd"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:visibility="visible" />
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/button0"
@@ -68,12 +67,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/zero"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonSum"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonDecimal" />
+        app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/buttonDecimal"
@@ -82,12 +83,14 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/primaryLightColor"
         android:fontFamily="@font/poppins"
+        android:onClick="decimalAction"
         android:text="@string/decimal"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button0"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/buttonSum"
@@ -95,8 +98,9 @@
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/primaryDeepColor"
-        android:text="@string/sum"
         android:fontFamily="@font/poppins"
+        android:onClick="sumAction"
+        android:text="@string/sum"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonResult"
@@ -108,25 +112,29 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/three"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
+        android:text="@string/three"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonSum"
         app:layout_constraintEnd_toStartOf="@+id/buttonDel"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
+        android:onClick="numberAction"
         android:text="@string/two"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button1"
@@ -134,12 +142,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/one"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button6"
@@ -147,12 +157,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/six"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/buttonDel"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button5"
@@ -160,12 +172,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/five"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4" />
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button4"
@@ -173,12 +187,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/four"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button9"
@@ -186,12 +202,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/nine"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toStartOf="@+id/buttonClear"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button8" />
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        tools:ignore="TextContrastCheck" />
 
 
     <Button
@@ -200,12 +218,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/eight"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button7"
@@ -213,12 +233,14 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="numberAction"
         android:text="@string/seven"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/buttonResult"
@@ -227,6 +249,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:fontFamily="@font/poppins"
+        android:onClick="resultAction"
         android:text="@string/result"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -241,6 +264,7 @@
         android:layout_marginBottom="14dp"
         android:backgroundTint="@color/secondaryColor"
         android:fontFamily="@font/poppins"
+        android:onClick="deleteAction"
         android:text="@string/delete"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonResult"
@@ -253,9 +277,11 @@
         android:layout_marginBottom="14dp"
         android:backgroundTint="@color/secondaryLightColor"
         android:fontFamily="@font/poppins"
+        android:onClick="clearAction"
         android:text="@string/clear"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonDel"
-        app:layout_constraintEnd_toEndOf="@+id/buttonDel" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonDel"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
