@@ -1,27 +1,29 @@
 package com.serapercel.sumcalculator
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.serapercel.sumcalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var addAction = false
-    private var addDecimal = true
+    private var addDecimal = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
     }
+
 
     fun numberAction(view: View) {
         if (view is Button) {
-            if (view.text == "." && addDecimal) {
+            binding.textViewInput.append(view.text)
+            addAction = true
+            addDecimal = true
+            /*if (view.text == "." && addDecimal) {
                 Log.e("sonuc", "if e girdi")
                 binding.textViewInput.append(view.text)
                 addDecimal = false
@@ -30,22 +32,24 @@ class MainActivity : AppCompatActivity() {
                 Log.e("sonuc", "else e girdi")
                 addAction = true
 
-            }
+            }*/
+
         }
     }
 
     fun sumAction(view: View) {
-        if (view is Button && addAction ) {
+        if (view is Button && addAction) {
             binding.textViewInput.append(view.text)
             addAction = false
-            addDecimal = true
+            addDecimal = false
         }
     }
+
     fun decimalAction(view: View) {
-        if (view is Button &&  addAction) {
+        if (view is Button && addDecimal) {
             binding.textViewInput.append(view.text)
             addAction = false
-           // addDecimal = true
+            // addDecimal = true
             addDecimal = false
         }
     }
@@ -57,7 +61,8 @@ class MainActivity : AppCompatActivity() {
 
     fun deleteAction(view: View) {
         val size = binding.textViewInput.length()
-        if (size > 0) binding.textViewInput.text=binding.textViewInput.text.subSequence(0, size - 1)
+        if (size > 0) binding.textViewInput.text =
+            binding.textViewInput.text.subSequence(0, size - 1)
     }
 
 
